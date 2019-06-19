@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 通过 !方法名 指定调用Action哪个方法,必须配置下列属性 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+	<!-- 开发者模式 -->
+	<constant name="struts.devMode" value="true"/>
+	
+	<package name="demo1" namespace="/" extends="struts-default">
+		<action name="pictureAction" class="com.hqyj.action.PictureAction">
+			<result name="showPic">/showPic.jsp</result>
+		</action>
+	</package>
+</struts>
